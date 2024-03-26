@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+           <style>
+            body{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+
+}
+.all{
+    background-image: url(./images.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    
+}
+.all .number{
+    height: 600px;
+    width: 600px;
+    font-weight: bolder;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    text-align: center;
+    transform: rotate(var(--rot));
+}
+.all .num1{
+    --rot:30deg;
+}
+.all .num2{
+    --rot:60deg;
+}
+
+.all .num3{
+    --rot:90deg;
+}
+
+.all .num4{
+    --rot:120deg;
+}
+
+.all .num5{
+    --rot:150deg;
+}
+
+.all .num6{
+    --rot:180deg;
+}
+.all .num7{
+    --rot:210deg;
+}
+
+.all .num8{
+    --rot:240deg;
+}
+
+.all .num9{
+    --rot:270deg;
+}
+
+.all .num10{
+    --rot:300deg;
+}
+
+.all .num11{
+    --rot:330deg;
+}
+
+.all .num12{
+    --rot:360deg;
+}
+.all .time{
+    transform-origin: bottom;
+}
+.all .houer{
+    position: absolute;
+    background-color: black;
+    height: 150px;
+    width: 10px;
+    border-top-left-radius: 100%;
+    border-top-right-radius:100%;
+    margin-top: 150px;
+    margin-left: 300px;
+    
+}
+.all .minate{
+    position: absolute;
+    background-color:cyan;
+    height: 290px;
+    width: 6px;
+    border-top-left-radius: 100%;
+    border-top-right-radius:100%;
+    margin-top: 10px;
+    margin-left: 302px;
+    
+}
+
+.all .second{
+    position: absolute;
+    background-color: red;
+    height: 250px;
+    width: 3px;
+    border-top-left-radius: 100%;
+    border-top-right-radius:100%;
+    margin-top: 50px;
+    margin-left: 303px;
+    
+}
+.dot{
+    position: absolute;
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-top: -59px;
+    margin-left: 433px;
+}
+td{
+    background-color: cornflowerblue;
+    height: 100px;
+    text-align: center;
+    width: 150px;
+    border-radius: 50%;
+    
+   
+}
+.letters{
+    background-color: rgb(100, 232, 237);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3px;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+.ti{
+   margin-top: 20px;
+   font-size: 20px;
+   font-weight: bolder;
+
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.lett{
+    background-color: rgb(100, 232, 237);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: px;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+
+}
+.tim{
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 30px;
+}
+
+
+
+           </style>
+</head>
+<body>
+    <div class="all">
+        <div class="time houer"></div>
+        <div class="time minate"></div>
+        <div class="time second"></div>
+        <div class="number num1">1</div>
+        <div class="number num2">2</div>
+        <div class="number num3">3</div>
+        <div class="number num4">4</div>
+        <div class="number num5">5</div>
+        <div class="number num6">6</div>
+        <div class="number num7">7</div>
+        <div class="number num8">8</div>
+        <div class="number num9">9</div>
+        <div class="number num10">10</div>
+        <div class="number num11">11</div>
+        <div class="number num12">12</div>
+    
+    </div>
+    <div class="dot"></div>
+    <br><br><br>
+    <table>
+        <tr>
+            <td><div class="ti millisec"></div><br> <div class="letters">Milli Second</div></td>
+
+            <td><div class="ti sec"></div><br> <div class="letters">Second</div></td>
+
+            <td><div class="ti min"></div><br> <div class="letters">Minute</div></td>
+
+            <td><div class="ti hou"></div><br> <div class="letters">houer</div></td>
+        </tr>
+    </table>
+    <br><br>
+
+    <table>
+        <tr>
+            <td><div class="tim year"></div><br> <div class="lett">Year </div></td>
+
+            <td><div class="tim month"></div><br> <div class="lett">Month</div></td>
+
+            <td><div class="tim date"></div><br> <div class="lett">Day Period</div></td>
+
+            <td><div class="tim day"></div><br> <div class="lett">Day</div></td>
+        </tr>
+    </table>
+
+
+    <script>
+        setInterval(yisak,1000)
+
+function yisak(){
+
+const houer = document.querySelector('.houer');
+
+const minate = document.querySelector('.minate');
+
+const second = document.querySelector('.second');
+
+const millisec = document.querySelector('.millisec');
+
+const sec = document.querySelector('.sec');
+
+const min = document.querySelector('.min');
+
+const hou = document.querySelector('.hou');
+
+const format = document.querySelector('.format')
+
+const year = document.querySelector('.year')
+
+const month = document.querySelector('.month')
+
+const datee = document.querySelector('.date')
+
+const dayy = document.querySelector('.day')
+
+let date = new Date();
+
+let h = date.getHours();
+
+let m = date.getMinutes();
+
+let s = date.getSeconds();
+
+let ms = date.getMilliseconds();
+
+let houerRatio = h*30 + m*6;
+
+let minateRatio = m*6 + s*0.1;
+
+let secondRatio  = s*6;
+
+houer.style.transform = `rotate(${houerRatio}deg)` 
+
+minate.style.transform = `rotate(${minateRatio}deg)` 
+
+second.style.transform = `rotate(${secondRatio}deg)` 
+
+millisec.innerHTML = `${ms}ms`;
+
+sec.innerHTML =`${s}s`;
+
+min.innerHTML = `${m}m`;
+
+hou.innerHTML = `${h}h`;
+let now = new Date()
+let noww = new Intl.DateTimeFormat('en-us',{
+    year:"numeric",
+  
+}).format(now);
+let nowww = new Intl.DateTimeFormat('en-us',{
+    month:"long",
+  
+}).format(now);
+let nowwww = new Intl.DateTimeFormat('en-us',{
+day:"numeric" 
+  
+}).format(now);
+let nowwwww = new Intl.DateTimeFormat('en-us',{
+dayPeriod:"long"
+  
+}).format(now);
+
+year.innerHTML = noww;
+month.innerHTML  = nowww;
+dayy.innerHTML = nowwww;
+datee.innerHTML =nowwwww ;
+
+
+
+
+}
+
+
+    </script>
+</body>
+</html>
